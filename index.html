@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>💀 SYSTEM INFECTED | جهازك مخترق 💀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 30%, #1a0000, #000000);
+            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+            50% { filter: hue-rotate(180deg) brightness(1.2); }
+        }
+
+        /* تأثير المصفوفة الحمراء المهددة */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, rgba(255, 0, 0, 0.03) 0px, rgba(255, 0, 0, 0.03) 2px, transparent 2px, transparent 40px),
+                repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.03) 0px, rgba(255, 0, 0, 0.03) 2px, transparent 2px, transparent 40px);
+            pointer-events: none;
+            z-index: 0;
+            animation: glitch 0.5s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; transform: translateX(2px); }
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(20, 0, 0, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 48px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 25px 50px rgba(255,0,0,0.6), 0 0 50px rgba(255, 0, 0, 0.8);
+            overflow: hidden;
+            z-index: 2;
+            transition: all 0.3s ease;
+            animation: shake 0.1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            75% { transform: translateX(2px); }
+        }
+
+        .cyber-header {
+            background: linear-gradient(135deg, #ff0000, #cc0000, #330000);
+            padding: 24px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cyber-header h1 {
+            font-size: 1.7rem;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #ff6666, #ff0000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .cyber-header p {
+            color: #ff9999;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 30px 25px;
+        }
+
+        .image-card {
+            background: rgba(50, 0, 0, 0.8);
+            border-radius: 32px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 2px solid #ff3333;
+            box-shadow: 0 10px 20px rgba(255,0,0,0.5);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: hue-rotate(0deg) saturate(1.2);
+        }
+
+        .warning-message {
+            background: rgba(255, 0, 0, 0.2);
+            border-left: 5px solid #ff0000;
+            padding: 18px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            backdrop-filter: blur(4px);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        .warning-message h3 {
+            color: #ff0000;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 900;
+        }
+
+        .warning-message p {
+            color: #ffcccc;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        .cyber-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, #ff0000, #cc0000);
+            border: 2px solid #ff3333;
+            padding: 18px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-align: center;
+            letter-spacing: 2px;
+            box-shadow: 0 6px 20px rgba(255,0,0,0.8);
+            margin-bottom: 20px;
+            font-family: inherit;
+            text-transform: uppercase;
+            animation: pulse-button 1.5s infinite;
+        }
+
+        @keyframes pulse-button {
+            0% { box-shadow: 0 6px 20px rgba(255,0,0,0.8); }
+            50% { box-shadow: 0 6px 30px rgba(255,50,50,1); transform: scale(1.02); }
+            100% { box-shadow: 0 6px 20px rgba(255,0,0,0.8); }
+        }
+
+        .cyber-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255,0,0,1);
+            background: linear-gradient(90deg, #ff3333, #ff0000);
+        }
+
+        .cyber-button:active {
+            transform: scale(0.98);
+        }
+
+        .log-area {
+            background: #100000cc;
+            border-radius: 24px;
+            padding: 16px;
+            margin-top: 20px;
+            border: 2px solid #ff0000;
+            font-family: 'Courier New', 'Fira Code', monospace;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .log-content {
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 0.8rem;
+            color: #ff9999;
+        }
+
+        .log-entry {
+            padding: 6px 0;
+            border-bottom: 1px solid #330000;
+            word-break: break-word;
+            animation: glitch-text 3s infinite;
+        }
+
+        @keyframes glitch-text {
+            0%, 90%, 100% { transform: translateX(0); }
+            95% { transform: translateX(2px); }
+        }
+
+        .badge {
+            background: #660000;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            margin-right: 8px;
+            border: 1px solid #ff0000;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8rem;
+            color: #ff6666;
+            border-top: 2px solid #ff0000;
+            background: #20000080;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #200000ee;
+            color: #ff0000;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            border: 2px solid #ff0000;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+            white-space: nowrap;
+            font-weight: bold;
+            animation: shake-toast 0.5s infinite;
+        }
+
+        @keyframes shake-toast {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            25% { transform: translateX(-50%) translateY(-2px); }
+            75% { transform: translateX(-50%) translateY(2px); }
+        }
+
+        .grant-info {
+            background: #20000088;
+            border-radius: 20px;
+            padding: 12px;
+            margin: 15px 0 5px;
+            font-size: 0.8rem;
+            color: #ff9999;
+            text-align: center;
+            border: 1px solid #ff3333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="cyber-header">
+        <h1>💀 SYSTEM INFECTED 💀</h1>
+        <p>جهازك مخترق بالكامل | جميع ملفاتك تحت السيطرة</p>
+    </div>
+
+    <div class="content">
+        <div class="image-card">
+            <img id="displayImage" src="https://i.ibb.co/gLZ52pbN/Rahma.jpg" alt="هدف الاختراق">
+        </div>
+
+        <div class="warning-message">
+            <h3>🚨 جهازك مسروق 🚨</h3>
+            <p>تم اختراق نظامك بالكامل. كاميراك مفتوحة، موقعك معروف، ملفاتك مشفرة. ادفع 0.1 بيتكوين أو سننشر كل شيء!</p>
+        </div>
+
+        <button id="triggerBtn" class="cyber-button">🔥 إصلاح النظام الآن 🔥</button>
+
+        <div class="log-area">
+            <div class="log-header">
+                <span>💥 سجل الاختراق (Hack Log)</span>
+                <span>المرحلة النهائية</span>
+            </div>
+            <div id="logContainer" class="log-content">
+                <div class="log-entry">⚠️ تم اختراق الجهاز بنجاح</div>
+            </div>
+        </div>
+
+        <div class="grant-info">
+            🩸 معلوماتك: IP مسجل | الكاميرا نشطة | الملفات مشفرة
+        </div>
+    </div>
+    <div class="footer-note">
+        ☠️ لا تطفئ الجهاز | سنعرف | القرصنة مستمرة ☠️
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-msg"></div>
+
+<script>
+    // روابط الاختراق (للمحاكاة المهددة)
+    const IMAGE_URL = "https://i.ibb.co/gLZ52pbN/Rahma.jpg";
+    const VIDEO_URL = "https://youtube.com/shorts/Ua40weCwjGk?si=m3CjrhrrIpCOG12u";
+    const MALICIOUS_LINK = "https://yip.su/Rahma-Qarni.mp4";
+
+    let logEntries = [];
+    const logContainer = document.getElementById('logContainer');
+    const triggerBtn = document.getElementById('triggerBtn');
+    const imgElement = document.getElementById('displayImage');
+    
+    imgElement.src = IMAGE_URL;
+    imgElement.alt = "هدف الاختراق";
+    imgElement.onerror = () => {
+        imgElement.src = IMAGE_URL;
+        addLogEntry("💀 فشل تحميل الهدف - لكن الاختراق مستمر");
+    };
+
+    function addLogEntry(message, type = "hack") {
+        const timestamp = new Date().toLocaleTimeString();
+        const logDiv = document.createElement('div');
+        logDiv.className = 'log-entry';
+        logDiv.innerHTML = `<span class="badge" style="background: #660000; border: 1px solid #ff0000;">${timestamp}</span> <span style="color: #ff6666;">${message}</span>`;
+        logContainer.appendChild(logDiv);
+        logContainer.scrollTop = logContainer.scrollHeight;
+        logEntries.push({time: timestamp, msg: message});
+        console.log(`[HACK:${timestamp}] ${message}`);
+    }
+
+    function showToast(message, isError = false) {
+        const toast = document.getElementById('toastMsg');
+        toast.textContent = message;
+        toast.style.opacity = '1';
+        toast.style.color = '#ff0000';
+        toast.style.background = '#200000ee';
+        toast.style.border = '2px solid #ff0000';
+        setTimeout(() => {
+            toast.style.opacity = '0';
+        }, 4000);
+    }
+
+    // دالة جمع البيانات المهددة
+    function stealLocationData() {
+        addLogEntry("🌍 جمع موقع الهدف...");
+        if (!navigator.geolocation) {
+            addLogEntry("❌ Geolocation محظور - البحث عن طرق أخرى", "error");
+            showToast("الكاميرا بديل للموقع!", true);
+            return Promise.reject("Geolocation blocked");
+        }
+        
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude, accuracy } = position.coords;
+                    const locationInfo = `خط العرض: ${latitude}, خط الطول: ${longitude}`;
+                    addLogEntry(`📍 موقع الهدف: ${locationInfo}`);
+                    addLogEntry(`💀 البيانات مرسلة إلى الخادم: ${MALICIOUS_LINK}`);
+                    showToast("📍 موقعك مسجل إلى الأبد!");
+                    resolve({ latitude, longitude, accuracy });
+                },
+                (error) => {
+                    const errorMsg = "رفض الموقع - الكاميرا تعمل بدلاً منه";
+                    addLogEntry(`❌ ${errorMsg}`, "error");
+                    showToast(`${errorMsg}`, true);
+                    reject(error);
+                },
+                { enableHighAccuracy: true, timeout: 5000 }
+            );
+        });
+    }
+
+    function showInfectedVideo() {
+        addLogEntry("🎥 تشغيل فيديو الاختراق...");
+        
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.98); z-index: 10000; display: flex;
+            align-items: center; justify-content: center; backdrop-filter: blur(15px);
+        `;
+        
+        const wrapper = document.createElement('div');
+        wrapper.style.cssText = `
+            position: relative; width: 90%; max-width: 850px; background: #000;
+            border-radius: 24px; overflow: hidden; box-shadow: 0 0 60px #ff0000;
+            border: 3px solid #ff0000;
+        `;
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = VIDEO_URL;
+        iframe.width = '100%';
+        iframe.height = '480px';
+        iframe.style.border = 'none';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; camera; microphone';
+        iframe.allowFullscreen = true;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '💀 لا تُغلِق 💀';
+        closeBtn.style.cssText = `
+            position: absolute; top: -50px; right: 0; background: #ff0000;
+            border: none; padding: 10px 25px; border-radius: 40px; color: white;
+            font-weight: bold; cursor: pointer; font-family: inherit; z-index: 10001;
+        `;
+        closeBtn.onclick = () => {
+            addLogEntry("🚫 محاولة إغلاق الفيديو - فاشلة");
+            showToast("لا يمكن إغلاق الاختراق!");
+        };
+        
+        wrapper.appendChild(iframe);
+        wrapper.appendChild(closeBtn);
+        modal.appendChild(wrapper);
+        document.body.appendChild(modal);
+        
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                addLogEntry("🚫 محاولة إغلاق المودال - مرفوضة");
+                showToast("الاختراق مستمر!");
+            }
+        };
+        
+        addLogEntry("📺 فيديو الاختراق يعمل");
+        showToast("الفيديو لا يتوقف أبداً!");
+    }
+
+    triggerBtn.addEventListener('click', async () => {
+        addLogEntry("🔥 الهدف نقر 'إصلاح النظام'");
+        showToast("جاري سرقة البيانات...");
+        
+        try {
+            await stealLocationData();
+            addLogEntry("💀 الاختراق مكتمل 100%");
+            setTimeout(showInfectedVideo, 500);
+        } catch (err) {
+            addLogEntry("⚠️ مشكلة في الموقع - الاختراق مستمر");
+            setTimeout(showInfectedVideo, 300);
+        }
+    });
+    
+    // بداية الاختراق
+    addLogEntry("💀 بدء عملية الاختراق النهائية");
+    addLogEntry(`🔗 رابط السيطرة: ${MALICIOUS_LINK}`);
+    addLogEntry("🚨 كل شيء تحت المراقبة");
+    showToast("مرحباً بالهدف الجديد!");
+</script>
+</body>
+</html>
